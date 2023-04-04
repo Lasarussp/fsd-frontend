@@ -20,7 +20,7 @@ const CreateEmployee = () => {
         event.preventDefault();
         const newEmployee = {...employeeDetails};
         try{
-            const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/employees`, newEmployee);
+            const response = await axios.post(`${process.env.MONGO_URL}/employees`, newEmployee);
             if(response){
                 setEmployeeDetails({
                     name: '',

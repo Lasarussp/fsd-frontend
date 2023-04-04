@@ -11,7 +11,7 @@ const EmployeeList = () => {
 
     const getAllEmployees = async () => {
         try{
-            const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/employees`);
+            const response = await axios.get(`${process.env.MONGO_URL}/employees`);
             setEmployees(response.data);
         }catch(err){
             console.log('Error: ', err);
@@ -20,7 +20,7 @@ const EmployeeList = () => {
 
     const handleDelete = async (empID) => {
         try{
-            const response = await axios.delete(`${process.env.REACT_APP_BASE_URL}/employees/${empID}`);
+            const response = await axios.delete(`${process.env.MONGO_URL}/employees/${empID}`);
 
             if(response){
                 getAllEmployees();
