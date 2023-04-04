@@ -1,0 +1,8 @@
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+form > div{
+    margin: 0.5em;
+}
